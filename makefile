@@ -9,7 +9,7 @@ ZIPFILE = project_files.zip
 all: $(TARGET) $(ZIPFILE)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJECTS) -lm
 
 # Direct rule for creating the zip file
 $(ZIPFILE): $(SOURCES) MemoryManager.h Makefile
