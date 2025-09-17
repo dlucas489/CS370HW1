@@ -1,26 +1,25 @@
-#ifndef MY_HEADER_FILE_H
-#define MY_HEADER_FILE_H
+#ifndef MEMORY_MANAGER_H
+#define MEMORY_MANAGER_H
 
-#define MAX_VALUE 100
-#define PI 3.14159
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-// Declare global variables (use 'extern' keyword)
-extern int globalVariable;
-extern const char* programName;
+// called by driver
+float get_running_ratio(void);
 
-// Declare function prototypes
-void myFunction(int arg1, char* arg2);
-int calculateSum(int a, int b);
+// Helpers
+int   random_in_range(int lower_bound, int upper_bound);
+int   get_square_count(int *array, int size);
 
-// Define structures or enums
-typedef struct {
-    int id;
-    char name[50];
-} MyStruct;
+// Memory safety & tracking
+int*  safe_malloc(int size);
+int*  tracked_malloc(int size);
+void  tracked_free(void *ptr, int size); 
+void  print_memory_summary(void);
 
-typedef enum {
-    STATUS_OK,
-    STATUS_ERROR
-} StatusCode;
+#ifdef __cplusplus
+}
+#endif
 
-#endif // MY_HEADER_FILE_H
+#endif
