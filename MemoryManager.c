@@ -78,7 +78,7 @@ int get_square_count(int *array, int size) {
 
 float get_running_ratio(void) {
     //Ascertain num of iterations
-    int totalIterations = random_in_range(50, 100);
+    int totalIterations = random_in_range(50, 200);
     printf("[MemoryManager] Number of iterations is: %d\n", totalIterations);
 
     // track max ratio
@@ -88,7 +88,7 @@ float get_running_ratio(void) {
     // running average. ratios / iterations
     double sum_ratios = 0.0;
 
-    for (int iter = 1; iter <= totalIterations; iter++) {
+    for (int iter = 0; iter < totalIterations; iter++) {
 
         // Random arr.size [50,100]
         int arraySize = random_in_range(50, 200);

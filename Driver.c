@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 
     float running_ratio = get_running_ratio();
 
-    printf("[Driver] AVG perfect_sqr/non_perfect_sr ratio: %.6f\n", running_ratio);
+    printf("[Driver] AVG perfect_sqr/non_perfect_sqr ratio: %.6f\n", running_ratio);
 
     return 0;
 }
