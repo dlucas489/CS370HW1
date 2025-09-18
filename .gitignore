@@ -1,0 +1,6 @@
+# build artifacts
+*.o
+Driver
+project_files.zip
+.DS_Store
+Instructions.pdf
